@@ -9,6 +9,7 @@ namespace Lernclass
     class Min
     {
         public int minVal(params int[] nums) //params позволяет задать произвольное колчиествопараметров.
+        //params должен всегда быть в конце и быть единственным
         {
             int m;
             if (nums.Length == 0)

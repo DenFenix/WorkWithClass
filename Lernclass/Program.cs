@@ -58,6 +58,28 @@ namespace Lernclass
             min = ob.minVal(mass);
             Console.WriteLine("Минимум равен " + min);
 
+            //возвращение методами объектов
+            Rect r1 = new Rect(4,5);
+            Console.Write("Размеры прямоугольника r1: ");
+            r1.show();
+            //прямоугольник, который в 2ое больше прямоугольника r1
+            Rect r2 = r1.enlarge(2); //заместо new Rect(width * factor, height * factor)
+            Console.Write("Размеры прямоугольника r2:");
+            r2.show();
+            Console.WriteLine("Площадь прямоугольника r2:" + r2.area());
+
+            /*В фабриках класса применяются классовые типы значений*/
+            /*Фабрик класса  - метод который используется для построения заданного класса */
+
+            MyClass ob2 = new MyClass();
+            int ii, jj;
+            //генерируем объекты с помощью фабрики класса
+            for (ii = 0, jj = 10; ii < 10; ii++, jj++)
+            {
+               MyClass anotherOb =  ob2.factory(ii, jj); //создаём объект
+                anotherOb.show();
+            }
+            Console.WriteLine();
 
 
             Console.ReadKey();

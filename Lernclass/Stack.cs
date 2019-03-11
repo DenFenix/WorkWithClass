@@ -78,6 +78,11 @@ namespace Lernclass
         {
             return tos;
         }
+        /* проба params
+        public char GetSim(params char[] sim)
+        {
+            return sim[1];
+        }*/
 
     }
 }
