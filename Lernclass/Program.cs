@@ -40,6 +40,26 @@ namespace Lernclass
             }
             Console.WriteLine();
             if (stk1.empty()) Console.WriteLine("Стек stk1 пуст.\n");
+
+
+            //использование переменного количества аргументов
+
+            Min ob = new Min();
+            int min;
+            int a = 10, b = 20;
+            min = ob.minVal(a, b);
+            Console.WriteLine("Минимум равен "+ min);
+
+            min = ob.minVal(a, b, -1);
+            Console.WriteLine("Минимум равен " + min);
+
+            //можно так е передать int массив
+            int[] mass = {1,2,3,4,5 };
+            min = ob.minVal(mass);
+            Console.WriteLine("Минимум равен " + min);
+
+
+
             Console.ReadKey();
 
         }
