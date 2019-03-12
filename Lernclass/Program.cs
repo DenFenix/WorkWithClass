@@ -8,7 +8,7 @@ namespace Lernclass
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             //управление доступом осуществляется  public, private, protected, internal
             //public  разрешает доступ разрешает доступ к члену откуда угодно
@@ -81,7 +81,20 @@ namespace Lernclass
             }
             Console.WriteLine();
 
+            //12.03.2019
+            //Вызов перегруженного конструктора с помощью ссылки this
 
+            /*имя_конструктора (список_параметров1): this(список параметров2)
+             //тело конструтора, которое может ыть пустым*/
+            XYCoord t1 = new XYCoord();
+            XYCoord t2  = new XYCoord(8,9);
+            XYCoord t3 = new XYCoord(t2);
+            Console.WriteLine("t1.x, t1.y: " + t1.x + ", " + t1.y);
+            Console.WriteLine("t2.x, t2.y: " + t2.x + ", " + t2.y);
+            Console.WriteLine("t3.x, t3.y: " + t3.x + ", " + t3.y);
+
+            //Возвращение значений из main
+            //Main(): public static int Main();
             Console.ReadKey();
 
         }

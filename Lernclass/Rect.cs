@@ -29,7 +29,12 @@ namespace Lernclass
          использованием заддоного коэфициента увеличения*/
         public Rect enlarge(int factor)
         {
-           return new Rect(width * factor, height * factor); //кроме вызова коструктора в таком случае нужно доабвить new
+           Rect alfast = new Rect(width * factor, height * factor); //кроме вызова коструктора в таком случае нужно доабвить new
+            return alfast;
+
+
         }
+
+       
     }
 }
