@@ -8,7 +8,7 @@ namespace Lernclass
 {
     class Program
     {
-        static void Main()
+        static int Main(string[] args)
         {
             //управление доступом осуществляется  public, private, protected, internal
             //public  разрешает доступ разрешает доступ к члену откуда угодно
@@ -95,8 +95,51 @@ namespace Lernclass
 
             //Возвращение значений из main
             //Main(): public static int Main();
-            Console.ReadKey();
+            /*Для работы с аргументами командной строки
+             Main(): public static void Main(string[] args)  public static int Main(string[] args) */
 
+            //пирмер
+            //string[] args2 = new string[2];
+            //string[] args2 = { "закодировать", "зако", "зако"};
+            /*args2[0] = "закодировать";
+            args2[1] = "зако";
+            args2[2] = "зако";*/
+            Console.ReadKey();
+            //рабочий вариант вызов черехз
+            /*
+             * cd C:\Users\Denis\source\repos\Lernclass\Lernclass\bin\Debug
+             * Lernclass.exe
+             */
+            if (args.Length < 2)
+            {
+                Console.WriteLine("Использование+ "  +"слово1: <<закодировать>>/<<раскодировать>> " + "[слово2... словоN]");
+                return 1; //возврат значения признака неверного выполнения
+            }
+
+            if (args[0] != "закодировать" & args[0] != "раскодирвоать")
+            {
+                Console.WriteLine("Первым аргументом должно быть слово " + "\"закодировать\" или \"раскодировать\".");
+                return 1; // Возврат признака неверного выполнения. 
+            }
+            //Кодируем и декодируем сообщение
+            for (int n = 1; n < args.Length; n++)
+            {
+                for (int i2 = 0; i2 < args[n].Length; i2++)
+                {
+                    if (args[0] == "закодировать")
+                    {
+                        Console.Write((char)(args[n][i2] + 1)); ///берём n слово i2 символ
+                    }
+                    else
+                        Console.Write((char)(args[n][i2] - 1));
+                }
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+            
+            return 0;
+
+            
         }
     }
 }
