@@ -104,6 +104,59 @@ namespace Lernclass
             /*args2[0] = "закодировать";
             args2[1] = "зако";
             args2[2] = "зако";*/
+
+
+            //перегрузка логических операторов
+            ThreeD tre0 = new ThreeD();
+            ThreeD tre1 = new ThreeD(1, 1, 1);
+            ThreeD tre2 = new ThreeD(2,2,2);
+            Console.WriteLine(tre0 | tre1);
+            Console.WriteLine(tre0 | tre0);
+            Console.WriteLine(tre0 & tre1);
+            Console.WriteLine(!tre0);
+
+            //Чтобы сделать учечённные нужно
+            /*
+             * 1. Класс доджен перегружать операторы & и |. 
+             * 2.  &- и |-методы должны возвращать объект класса
+             * 3. каждый параметр должен представлять собой ссылку на объект класса
+             * 4. класс должен перегружать операторы true и false
+             */
+            Console.WriteLine(tre0 && tre1);
+            Console.WriteLine(tre0 ||tre1);
+            if (tre0 && tre1)
+            {
+                Console.WriteLine("True");
+            }
+            else
+                Console.WriteLine("Ложь");
+            if (tre0 || tre1)
+            {
+                Console.WriteLine("True");
+            }
+            else
+                Console.WriteLine("Ложь");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Console.ReadKey();
             //рабочий вариант вызов черехз
             /*

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ThreeD.cs" />
     <Compile Include="XYCoord.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Rect.cs" />
