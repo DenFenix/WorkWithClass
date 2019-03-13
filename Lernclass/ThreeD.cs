@@ -71,8 +71,12 @@ namespace Lernclass
             else
                 return false;
         }
+        public static implicit operator int(ThreeD ob1)
+        {
+            return ob1.x * ob1.y * ob1.z;
+        }
 
-      
+
 
     }
 }
