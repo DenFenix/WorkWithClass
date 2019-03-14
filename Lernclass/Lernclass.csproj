@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FailSoftArray2D.cs" />
     <Compile Include="ThreeD.cs" />
     <Compile Include="XYCoord.cs" />
     <Compile Include="MyClass.cs" />

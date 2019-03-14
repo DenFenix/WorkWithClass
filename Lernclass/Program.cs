@@ -148,9 +148,31 @@ namespace Lernclass
              * если impluict - автомтоматически
              * если explict - выполняется при использовании операторов приведения типов
              */
-            int i3i = new ThreeD(10, 10, 10);
+            //неявное
+            //int i3i = new ThreeD(10, 10, 10);
+
+            //явное
+            int i3i = (int)(new ThreeD(10, 10, 10));
             Console.WriteLine(i3i);
 
+            int per1, per2;
+            per1 = 9;
+            per2 = 9;
+            FailSoftArray2D ma2 = new FailSoftArray2D(per1,per2);
+            for (int z = 7, x = 7; z < 10; z++, x++)
+            {
+                ma2[z, x] = z * x;
+                if (ma2.svError)
+                    Console.WriteLine("fs[" + z + ", " + x + "] вне границ");
+               
+            }
+            for (int z = 7, x = 7; z < 10; z++, x++)
+            {
+                Console.WriteLine(ma2[z,x]);
+                if (ma2.svError)
+                    Console.WriteLine("fs[" + z + ", " + x + "] вне границ");
+
+            }
 
 
 
