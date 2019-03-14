@@ -173,8 +173,31 @@ namespace Lernclass
                     Console.WriteLine("fs[" + z + ", " + x + "] вне границ");
 
             }
+            //свойства - поле и методы доступа к полю
+            //свойства похожи на инексаторы имя и get set
+            /*
+             * тип имя
+             * {
+             *  get
+             *  {
+             *      //код аксессора чтения поля
+             *  }
+             *  set
+             *  {
+             *      //код аксессора записи поля тут есть value
+             *  }
+             * }
+             * тип - это тип свойства  int, double  и т.д
+             * имя - его имя
+             * замето них можно использовать методы
+             */
 
-
+            SimpProp obj = new SimpProp();
+            Console.WriteLine("Исходное значение ob.myprop: " + obj.mypop);
+            obj.mypop = 10;
+            Console.WriteLine("Присвоенно значение ob.myprop: " + obj.mypop);
+            obj.mypop = -1;
+            Console.WriteLine("-1 ob.myprop: " + obj.mypop);
 
 
 
