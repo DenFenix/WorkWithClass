@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Triangle.cs" />
+    <Compile Include="TwoDShape.cs" />
     <Compile Include="FailSoftArray2D.cs" />
     <Compile Include="SimpProp.cs" />
     <Compile Include="ThreeD.cs" />
