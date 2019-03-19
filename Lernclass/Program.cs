@@ -205,19 +205,19 @@ namespace Lernclass
              class имя_производного_класса : имя_базового_класса {  // тело класса  }
              */
             Triangle tr = new Triangle();
-            tr.height = 10;
-            tr.width = 10;
-            tr.style = "ravnostoron";
+            tr.Height = 10;
+            tr.Width = 10;
+            tr.Style = "ravnostoron";
 
             tr.showStype();
             
             tr.showDim();
             Console.WriteLine(tr.area());
 
-            Rectangle kw = new Rectangle();
-            kw.height = 1;
-            kw.width = 2;
-            Console.WriteLine("Площадь квадрата 1"+ kw.area());
+            Rectangle kw = new Rectangle(1,2);
+            /*kw.Height = 1;
+            kw.Width = 2;*/
+            Console.WriteLine("Площадь квадрата "+ kw.area());
 
 
 

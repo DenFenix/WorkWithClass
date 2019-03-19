@@ -8,17 +8,21 @@ namespace Lernclass
 {
     class Triangle : TwoDShape
     {
-        public string style;//type triangle
+        public new int s; //s скрываем из базого класса и создаем в дочернем заново
+        private string style;//type triangle
+
+        public string Style { get => style; set => style = value; }
+
         //Метод возвращает площадь треугольника
 
         public double area()
         {
-            return width * height / 2;
+            return Width * Height / 2;
         }
         
         public  void showStype()
         {
-            Console.WriteLine("Треугольник" + style);
+            Console.WriteLine("Треугольник" + Style);
         }
     }
 }

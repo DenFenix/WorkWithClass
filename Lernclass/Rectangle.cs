@@ -8,9 +8,21 @@ namespace Lernclass
 {//rectangle наследует twodsharp 
     class Rectangle :TwoDShape
     {//возрвашает правду если прямоугольник квадрат
+
+        public Rectangle()
+        {
+            base.s =5; //получаем переменную s базового класса
+        }
+        public Rectangle(int h, int w) : base(h, w)
+        {
+        }
+        public Rectangle(Rectangle ob) : base(ob)
+        {
+        }
+
         public bool isSuare()
         {
-            if (width == height)
+            if (Width == Height)
                 return true;
             else
                 return false;
@@ -20,7 +32,7 @@ namespace Lernclass
         //находим площадь
         public double area()
         {
-            return width * height;
+            return Width * Height;
         }
     }
 }
