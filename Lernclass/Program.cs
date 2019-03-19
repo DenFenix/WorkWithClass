@@ -217,8 +217,24 @@ namespace Lernclass
             Rectangle kw = new Rectangle(1,2);
             /*kw.Height = 1;
             kw.Width = 2;*/
-            Console.WriteLine("Площадь квадрата "+ kw.area());
+            Console.WriteLine("Площадь квадрата " + kw.area());
 
+
+            Console.WriteLine("Виртуальные методы и их определение");
+            Base baseob = new Base();
+            Derived1 dOb1 = new Derived1();
+            Derived2 dOb2 = new Derived2();
+            Derived3 dOb3 = new Derived3();
+            Base baseref; //ссылка на базовый подкласс
+            baseref = baseob;
+            baseref.who(); //взависимости от типа объекта выполняется своя версия
+            baseref = dOb1;
+            baseref.who();
+            baseref = dOb2;
+            baseref.who();
+            baseref = dOb3;
+            baseref.who(); //первый переопределеннный метод при просмотре иерархии сверху вниз
+            //свойства можно можфицировать с помощью виртуал и оверрайд
 
 
 

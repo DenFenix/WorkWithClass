@@ -35,4 +35,5 @@ namespace Lernclass
             return Width * Height;
         }
     }
+
 }
