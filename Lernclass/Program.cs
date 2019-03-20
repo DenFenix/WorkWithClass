@@ -236,7 +236,7 @@ namespace Lernclass
             baseref.who(); //первый переопределеннный метод при просмотре иерархии сверху вниз
             //свойства можно можфицировать с помощью виртуал и оверрайд
 
-
+            
 
             //Класс обжект
             Console.WriteLine(baseref.Equals(dOb1)); //определяет является ли вызвывающий объект таким же, как  объект, адрисуемый ссылкой ob
@@ -246,12 +246,29 @@ namespace Lernclass
             Console.WriteLine(ReferenceEquals(dOb1, dOb2)); //определяет, ссылются ли 1 и 2 на один и тот же объект    
             Console.WriteLine(dOb1.ToString()); //возращает строку, которая описывает объект
 
-            Console.WriteLine(new MyClass().ToString());
+            Console.WriteLine(new MyClass().ToString()); //Возвращение пререопределенного метода из класса object
 
 
+            //Приведение к объектному типу и восстановление значения
+            int xt;
+            object obje;
+            xt = 10;
+            obje = xt;// Превращаем xt в объект
+            Console.WriteLine(obje.ToString());
+            int yt = (int)obje; //обратное превращение
+            Console.WriteLine(yt);
 
+            //Другой пример
+            //приведение  значений к объектному типу возможно при передаче значений методами
+            int xt2;
+            xt2 = 10;
+            Console.WriteLine("Значение x =" +xt2);
+            //переменная xt2 автоматически приводится к объектому типу при передаче в sqr
+            xt2 = Program.sqr(xt2);
+            Console.WriteLine("Значение ч в квадрате рано" + xt2);
 
-
+            //ещё пример
+            Console.WriteLine(10.ToString()); //10 представляется как объект и выводится его строковое представдение 10
 
 
             Console.ReadKey();
@@ -290,6 +307,10 @@ namespace Lernclass
             return 0;
 
             
+        }
+        static int sqr(object o)
+        {
+            return (int)o * (int)o; //возвращается уже int
         }
     }
 }
