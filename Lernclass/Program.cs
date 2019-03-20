@@ -238,10 +238,15 @@ namespace Lernclass
 
 
 
+            //Класс обжект
+            Console.WriteLine(baseref.Equals(dOb1)); //определяет является ли вызвывающий объект таким же, как  объект, адрисуемый ссылкой ob
+            Console.WriteLine(Equals(baseref, dOb1)); //Определяет является ли объект 1 таким же как и объект 2
+            Console.WriteLine(baseref.GetHashCode()); //Возвращает хэш-код
+            Console.WriteLine(baseref.GetType()); //получает тип оъекта во время выполнения программы
+            Console.WriteLine(ReferenceEquals(dOb1, dOb2)); //определяет, ссылются ли 1 и 2 на один и тот же объект    
+            Console.WriteLine(dOb1.ToString()); //возращает строку, которая описывает объект
 
-
-
-
+            Console.WriteLine(new MyClass().ToString());
 
 
 

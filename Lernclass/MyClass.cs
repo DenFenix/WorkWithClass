@@ -23,5 +23,10 @@ namespace Lernclass
         {
             Console.WriteLine("a и b:" +a+" "+b);
         }
+        //переопределенный метод ToString из object
+        public override string ToString()
+        {
+            return "Объект класса MyClasss";
+        }
     }
 }
