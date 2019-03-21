@@ -271,6 +271,33 @@ namespace Lernclass
             Console.WriteLine(10.ToString()); //10 представляется как объект и выводится его строковое представдение 10
 
 
+            object[] p1 = new object[9];
+            //сохраняем int значения
+            for(int i3 = 0; i3<3;i3++)
+            {
+                p1[i3] = i3;
+            }
+            //сохраняем double значениия
+            for(int j3=3;j3<6;j3++ )
+            {
+                p1[j3] = (double)j3;
+            }
+            //сохраняем bool, string и char значения
+            p1[6] = true;
+            p1[7] = 'x';
+            p1[8] = "asf";
+
+
+            for (int bb = 0; bb<p1.Length;bb++)
+            {
+                Console.WriteLine(p1[bb]);
+            }
+
+
+
+
+
+
             Console.ReadKey();
             //рабочий вариант вызов черехз
             /*
