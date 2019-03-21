@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base.cs" />
+    <Compile Include="ByTwos.cs" />
+    <Compile Include="ISeries.cs" />
+    <Compile Include="Primes.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="TwoDShape.cs" />

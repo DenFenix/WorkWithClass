@@ -293,10 +293,43 @@ namespace Lernclass
                 Console.WriteLine(p1[bb]);
             }
 
-
-
-
-
+            //Интерфейсы
+            /*interface имя
+             {
+             тип_возрата имя метода 1(сиксок параметров);
+             тип_возрата имя метода 2(сиксок параметров);
+             }*/
+            /*интерфейс который генерирует ряд чисел
+             public interface ISeries
+             {
+             int getNext(); //Возвращает следующее число ряда
+             void reset(); //Выполняет перезапуск
+             void setStat(int x); //устанавливает начальные значения
+             }
+             */
+            /*класс который реализует интерефейс
+             class имя_класса : имя_интерфейса
+             {
+             //тело класса
+             }
+           */
+            ByTwos o1b1 = new ByTwos();
+            for(int i3 = 0; i3<5;i3++)
+            {
+                Console.WriteLine("Следующее значение равно " + o1b1.getNext());
+            }
+            Console.WriteLine("\nПереход в исходное состояние.");
+            o1b1.reset();
+            for (int i3 = 0; i3 < 5; i3++)
+            {
+                Console.WriteLine("Следующее значение равно " + o1b1.getNext());
+            }
+            Console.WriteLine("\nНачинаем с числа 100.");
+            o1b1.setStart(100);
+            for (int i3 = 0; i3 < 5; i3++)
+            {
+                Console.WriteLine("Следующее значение равно " + o1b1.getNext());
+            }
 
             Console.ReadKey();
             //рабочий вариант вызов черехз
